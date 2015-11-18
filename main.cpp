@@ -9,15 +9,16 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    int a[4];
+    //int a[4];
     int *p;
-    a[0]=5;
-    a[1]=10;
-    a[2]=15;
-    a[3]=20;
-    p=a;
-    printf("&a=%x     &a[0]=%x    &a[1]=%x     &a[2]=%x    &a[3]=%x\n  ",a,&a[0],&a[1],&a[2],&a[3]);
-    printf("a[0]=%d\n",*(a+1));
+    /*a[0]=5;
+     a[1]=10;
+     a[2]=15;
+     a[3]=20;*/
+    p=(int *)malloc(4);
+    if(p==0)
+        exit(0);
+    *p=100;
+    printf("p=%d    *p=%x\n",p,*p);
     return 0;
 }
